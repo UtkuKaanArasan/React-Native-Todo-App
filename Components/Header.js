@@ -10,14 +10,14 @@ const Header = (props) => {
 }
 
 Header.defaultProps = {
-    title:'Shopping List'
+    title:'To Do'
 }
 
 const styles = StyleSheet.create({
     header: {
         height: 60,
         padding: 15,
-        backgroundColor:'darkslateblue',
+        backgroundColor:'#5fad56',
     },
     text: {
         color: '#fff',

@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
     btn: {
-        backgroundColor: 'darkslateblue',
+        backgroundColor: '#5fad56',
         padding: 9,
         margin:5
     },
