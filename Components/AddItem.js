@@ -16,13 +16,14 @@ const AddItem = ({addItem}) => {
 
     const [userInput, setUserInput] = useState('')
 
-    const inputRef = useRef()
-
     function onChange(textValue) {
+        // Changes the user input value as the userr types
         setUserInput(textValue)
     }
 
     function submitHandler() {
+        /* This function submits the data to state located in App.js
+        and dismisses keyboard then sets the userinput to empty string*/
         addItem(userInput)
         Keyboard.dismiss()
         setUserInput('')
@@ -31,7 +32,6 @@ const AddItem = ({addItem}) => {
     return (
         <View>
             <TextInput 
-                ref={inputRef}
                 style={styles.input} 
                 placeholder='Add item...'
                 onChangeText={onChange}

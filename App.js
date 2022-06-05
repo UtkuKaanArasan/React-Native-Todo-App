@@ -1,6 +1,6 @@
 // React and React-native components
 import React, { useEffect, useState } from "react";
-import { View, Text, StyleSheet, FlatList, Alert } from "react-native";
+import { View, StyleSheet, FlatList, Alert } from "react-native";
 // Components
 import AddItem from "./Components/AddItem";
 import Header from "./Components/Header";
@@ -11,6 +11,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 const App = () => {
 
   const [items, setItems] = useState([
+  //Dummy Data
     { id: Math.floor(Math.random() * 255), text: 'milk' },
     { id: Math.floor(Math.random() * 255), text: 'meat' },
     { id: Math.floor(Math.random() * 255), text: 'egg' },
@@ -19,14 +20,17 @@ const App = () => {
   ]
   )
 
+  // It is passed as props to ListItem component
   const deleteItem = (id) => {
     setItems(prevItems => {
       return prevItems.filter(item => item.id != id)
     })
   }
 
+  // It is passed as props to AddItem Component
   const addItem = (newItemText) => {
     if (!newItemText) {
+      // If user doesn't input anything it warns them
       Alert.alert("Error", "Please enter a item")
     }
     else
