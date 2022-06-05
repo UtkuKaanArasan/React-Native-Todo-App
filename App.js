@@ -10,12 +10,13 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const App = () => {
 
-  const [items, setItems] = useState(
+  const [items, setItems] = useState([
     { id: Math.floor(Math.random() * 255), text: 'milk' },
     { id: Math.floor(Math.random() * 255), text: 'meat' },
     { id: Math.floor(Math.random() * 255), text: 'egg' },
     { id: Math.floor(Math.random() * 255), text: 'bread' },
     { id: Math.floor(Math.random() * 255), text: 'chocolate' },
+  ]
   )
 
   const deleteItem = (id) => {
