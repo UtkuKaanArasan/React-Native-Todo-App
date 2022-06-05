@@ -1,7 +1,8 @@
+// React and React native dependendcies
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+//Dependendcies
 import Icon from "react-native-vector-icons/dist/FontAwesome";
-
 
 const ListItem = ({ item, deleteItem }) => {
 

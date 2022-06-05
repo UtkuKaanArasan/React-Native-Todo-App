@@ -1,18 +1,22 @@
-import React, { useState } from "react";
+// React and React-native components
+import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, FlatList, Alert } from "react-native";
+// Components
 import AddItem from "./Components/AddItem";
 import Header from "./Components/Header";
 import ListItem from "./Components/ListItem";
+// Dependendcies
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const App = () => {
 
-  const [items, setItems] = useState([
+  const [items, setItems] = useState(
     { id: Math.floor(Math.random() * 255), text: 'milk' },
     { id: Math.floor(Math.random() * 255), text: 'meat' },
     { id: Math.floor(Math.random() * 255), text: 'egg' },
     { id: Math.floor(Math.random() * 255), text: 'bread' },
     { id: Math.floor(Math.random() * 255), text: 'chocolate' },
-  ])
+  )
 
   const deleteItem = (id) => {
     setItems(prevItems => {
@@ -23,7 +27,9 @@ const App = () => {
   const addItem = (newItemText) => {
     if (!newItemText) {
       Alert.alert("Error", "Please enter a item")
-    } else {
+    }
+    else
+    {
       setItems((prevItems) => {
         return [...prevItems, {id: Math.floor(Math.random() * 255), text: newItemText}]
       })

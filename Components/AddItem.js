@@ -1,3 +1,4 @@
+// React and React-Native components
 import React, { useRef } from "react";
 import {
     View, 
@@ -8,6 +9,7 @@ import {
     Keyboard
 } from "react-native";
 import { useState } from "react";
+// Dependendcies
 import Icon from "react-native-vector-icons/dist/FontAwesome";
 
 const AddItem = ({addItem}) => {
