@@ -5,8 +5,6 @@ import { View, StyleSheet, FlatList, Alert } from "react-native";
 import AddItem from "./Components/AddItem";
 import Header from "./Components/Header";
 import ListItem from "./Components/ListItem";
-// Dependendcies
-import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const App = () => {
 
